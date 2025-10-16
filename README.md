@@ -8,7 +8,7 @@ This paper proposes to utilize the hidden knowledge in the training dataset to i
 
 <img src="./figure/framework.png" width="900"/>
 
-[paper link](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Boosting_Image_Restoration_via_Priors_from_Pre-trained_Models_CVPR_2024_paper.pdf)
+[paper link](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_Learnable_Feature_Patches_and_Vectors_for_Boosting_Low-light_Image_Enhancement_ICCV_2025_paper.pdf)
 
 
 ## Project Setup
@@ -23,8 +23,8 @@ source activate py36
 Clone the repo and install the complementary requirements:
 ```
 cd $HOME
-git clone --recursive git@github.com:xiaogang00/LFPVS.git
-cd LFPVS
+git clone --recursive git@github.com:xiaogang00/LFPVS_ICCV.git
+cd LFPVS_ICCV
 pip install -r requirements.txt
 ```
 
