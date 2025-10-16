@@ -1,0 +1,37 @@
+### must be same as 
+
+name: SMID_model_LFPVs
+model: video_base3_refine2
+distortion: sr
+scale: 1
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+
+datasets:
+  test:  # the 1st test dataset
+    name: test
+    mode: video_samesize_SMID_test
+
+    dataroot_GT: /mnt/proj198/xgxu/low_light_dataset/SMID_Long_np
+    dataroot_LQ: /mnt/proj198/xgxu/low_light_dataset/SMID_LQ_np
+
+    cache_data: true
+    N_frames: 5
+    padding: new_info
+
+#### network structures
+network_G:
+  which_model_G: low_light_transformer4
+  nf: 64
+  nframes: 5      # must be same as N_frames in dataset.
+  groups: 8
+  front_RBs: 1
+  back_RBs: 1
+  predeblur: true     # default false
+  HR_in: true
+  w_TSA: true
+
+#### path
+path:
+  root: ./
+  pretrain_model_G: ./LFPVs_trained_checkpoints/SMID.pth
